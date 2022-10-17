@@ -32,6 +32,17 @@ class LifeCycleMethods extends React.Component {
     });
   };
 
+  componentDidMount() {
+    console.log("mounted");
+  }
+
+  componentDidUpdate(x, prevState) {
+    //!ilk render hariç diğer tüm renderlarda çalışır.
+    //! prevState ve prevProps degerlerini parametre olarak alabilir.
+    console.log("updated");
+    console.log(prevState.count);
+  }
+
   render() {
     return (
       <div className="container text-center">
