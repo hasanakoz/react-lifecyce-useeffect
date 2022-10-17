@@ -43,6 +43,11 @@ class LifeCycleMethods extends React.Component {
     console.log(prevState.count);
   }
 
+  componentWillUnmount() {
+    //!bir component DOM agacından kaldırıldığında çağırılır.
+    console.log("unmounted");
+  }
+
   render() {
     return (
       <div className="container text-center">
